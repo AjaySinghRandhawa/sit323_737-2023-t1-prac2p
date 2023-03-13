@@ -1,9 +1,9 @@
 curl http://localhost:3000/users
 
-curl -X POST -H "Content-Type: application/json" -d '{"id":4,"name":Ajay}' http://localhost:3000/users
-
 Invoke-RestMethod -Uri http://localhost:3000/users -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"id": 4, "name": "Ajay"}'
 
-curl -X POST http://localhost:3000/users -H 'Content-Type: application/json'  -d '{"id":"5","name":"Monkey"}'
+curl -X POST http://localhost:3000/users -H 'Content-Type: application/json' -d '{"id":"5","name":"Monkey"}'
 curl -X DELETE http://localhost:3000/users/json?id=2
 curl  -X POST -H "Content-Type: application/json" -d '{"id":"1","name":"Dillan"}' http://localhost:3000/users
+
+curl localhost:3000/api/users/1
